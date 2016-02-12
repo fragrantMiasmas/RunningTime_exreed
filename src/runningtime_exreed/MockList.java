@@ -31,30 +31,22 @@ public class MockList {
     
      public void add(int j, String[] str, String x) {
         j = str.length + 1;
-        String[] str2 = new String[j];
+        String[] strA = new String[j];
             for (int i = 0; i < str.length; i++) {
-                str2[i+1] = str[i];
+                strA[i+1] = str[i];
             }
-            str2[0] = x;
+            strA[0] = x;
     }
      
-      public void remove(int j, String[] str, String y){ //sets everything to null
-        String temp = str[j];
-        for(int i = j-1; i< str.length; i++){ //i>0, i--
-           str[j+1] = str[j];
-       }
-        str[j] = y;
-        str[0] = temp;
-    }
        
-//     public void remove(int k, String[] str, String y){ //sets everything to null
-//        k = str.length - 1;
-//        String[] str2 = new String[k];
-//        for(int i = 0; i > str.length; i--){
-//           str2[i-1] = str[i];
-//       }
-//        str2[0] = y;
-//    }
+     public void remove(int k, String[] strA){ //shrinks original array
+        k = strA.length-1;
+        String[] strR = new String[k]; 
+        for(int i = strA.length; i > 0; i--){
+           strR[i-1] = strA[i];
+       }
+    }
+     
     public void testMock(int n, String[] str){        
         //adds
         sw.start();
@@ -65,13 +57,13 @@ public class MockList {
         System.out.printf("for " + n + " iterations, time = " + sw.read() + " nano seconds; avg = " + (sw.read()/n) + " per string appended.\n");
         
         //removes
-//        sw.start();
-//        for(int i=0; i< n; i++) {
-//           remove(0, str, "");
-//        }
-//        sw.stop();
-//        System.out.printf("for " + n + " iterations, time = " + sw.read() + " nano seconds; avg = " + (sw.read()/n) + " per string removed.\n");
-//        System.out.println("");
+        sw.start();
+        for(int i=0; i< n; i++) {
+           remove(str.length, str);
+        }
+        sw.stop();
+        System.out.printf("for " + n + " iterations, time = " + sw.read() + " nano seconds; avg = " + (sw.read()/n) + " per string removed.\n");
+        System.out.println("");
     }
         
 //     public void testMockList(){ //for main class
