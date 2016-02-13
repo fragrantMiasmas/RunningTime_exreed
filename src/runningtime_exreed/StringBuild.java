@@ -36,6 +36,7 @@ public class StringBuild { //fixed string
 
     public void testStringBuilder() { //for mmain class
         System.out.println("Testing StringBuilders....");
+//        builder(1, sb1);
         builder(10, sb1); //10 iterations
         builder(100, sb2); //100 iterations
         builder(1000, sb3); //1000 iterations

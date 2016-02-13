@@ -14,10 +14,7 @@ import java.util.ArrayList;
 public class ArrayListClass {
     
     ArrayList<String>str1 = new ArrayList<>();
-    ArrayList<String>str2 = new ArrayList<>();
-    ArrayList<String>str3 = new ArrayList<>();
-    ArrayList<String>str4 = new ArrayList<>();
-    ArrayList<String>str5 = new ArrayList<>();
+    
     
     StopWatch SW = new StopWatch();
     
@@ -50,10 +47,10 @@ public class ArrayListClass {
     public void testArrayList() { //for main class
         System.out.println("Testing ArrayLists....");
         testPrint(10, str1);
-        testPrint(100, str2);
-        testPrint(1000, str3);
-        testPrint(10000, str4);
-        testPrint(100000, str5);
+        testPrint(100, str1);
+        testPrint(1000, str1);
+        testPrint(10000, str1);
+        testPrint(100000, str1);
     }
        
 }
