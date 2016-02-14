@@ -33,9 +33,9 @@ public class MockList {
         for (int i = 0; i < obj.length; i++) {
             str[i + 1] = obj[i];
         }
+        obj = str;
         str[0] = "Hello World";
-        //System.out.println(str[0]);
-        System.out.println(java.util.Arrays.toString(str));
+        //System.out.println(java.util.Arrays.toString(str));
     }
 
   
@@ -54,7 +54,6 @@ public class MockList {
         sw.start();
         for (int i = 0; i < n; i++) {
             add();
-//            System.out.println(obj);
             //System.out.println(java.util.Arrays.toString(obj));
         }
         sw.stop();
@@ -76,15 +75,15 @@ public class MockList {
         System.out.println("Testing MockLists....");
         //insert method
          testAdd(10); //10 iterations
-//         testRemove(10, obj2);
-//         testAdd(100); //100 iterations
-//         testRemove(100, obj3);
-//         testAdd(1000); //1000 iterations
-//         testRemove(1000, obj4); 
-//         testAdd(10000); //10000 iterations
-//         testRemove(10000, obj5); 
-//         testAdd(100000); //100000 iterations
-//         testRemove(100000, obj6); //10000 iterations
+         testRemove(10, obj2);
+         testAdd(100); //100 iterations
+         testRemove(100, obj3);
+         testAdd(1000); //1000 iterations
+         testRemove(1000, obj4); 
+         testAdd(10000); //10000 iterations
+         testRemove(10000, obj5); 
+         testAdd(100000); //100000 iterations
+         testRemove(100000, obj6); //10000 iterations
     }
 
 }
