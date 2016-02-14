@@ -25,6 +25,7 @@ public class StringClass {
         sw.start();
         for (int i = 0; i < n; i++) {
             myString += newString;
+            //System.out.println(myString); //troubleshooting
         }
         sw.stop();
         System.out.printf("for " + n + " iterations, time = " + sw.read() + " nano seconds; avg = " + (sw.read()/n) + " per string appended.\n");

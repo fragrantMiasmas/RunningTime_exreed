@@ -30,6 +30,7 @@ public class ArrayListClass {
         SW.start();
         for (int i = 0; i < n; i++) {
             add(str);
+            //System.out.println(str); //troubleshoot
         }
         SW.stop();
         System.out.printf("for " + n + " iterations, time = " + SW.read() + " nano seconds; avg = " + (SW.read()/n) + " per string appended.\n");  
@@ -38,6 +39,7 @@ public class ArrayListClass {
         SW.start();
         for (int i = 0; i < n; i++) {
             remove(str);
+            //System.out.println(str);
         }
         SW.stop();
         System.out.printf("for " + n + " iterations, time = " + SW.read() + " nano seconds; avg = " + (SW.read()/n) + " per string removed.\n");  
@@ -47,10 +49,10 @@ public class ArrayListClass {
     public void testArrayList() { //for main class
         System.out.println("Testing ArrayLists....");
         testPrint(10, str1);
-        testPrint(100, str1);
-        testPrint(1000, str1);
-        testPrint(10000, str1);
-        testPrint(100000, str1);
+//        testPrint(100, str1);
+//        testPrint(1000, str1);
+//        testPrint(10000, str1);
+//        testPrint(100000, str1);
     }
        
 }

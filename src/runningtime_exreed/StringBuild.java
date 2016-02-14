@@ -28,7 +28,8 @@ public class StringBuild { //fixed string
     public void builder(int n, StringBuilder sb) {
         sw.start();
         for (int i = 0; i < n; i++) {
-            sb.append("Hello World"); 
+            sb.append("Hello World "); 
+            //System.out.println(sb); //troubleshoot
         }
         sw.stop();
         System.out.printf("for " + n + " iterations, time = " + sw.read() + " nano seconds; avg = " + (sw.read()/n) + " per string appended.\n");
@@ -36,7 +37,6 @@ public class StringBuild { //fixed string
 
     public void testStringBuilder() { //for mmain class
         System.out.println("Testing StringBuilders....");
-//        builder(1, sb1);
         builder(10, sb1); //10 iterations
         builder(100, sb2); //100 iterations
         builder(1000, sb3); //1000 iterations

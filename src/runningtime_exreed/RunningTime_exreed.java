@@ -16,15 +16,15 @@ public class RunningTime_exreed {
      */
     public static void main(String[] args) {
        
-        StringClass strClass = new StringClass();
-        strClass.testString();
-        
-        StringBuild SB = new StringBuild();
-        SB.testStringBuilder();
-        
-        ArrayListClass ALC = new ArrayListClass();
-        ALC.testArrayList();
-        
+//        StringClass strClass = new StringClass();
+//        strClass.testString();
+//        
+//        StringBuild SB = new StringBuild();
+//        SB.testStringBuilder();
+//        
+//        ArrayListClass ALC = new ArrayListClass();
+//        ALC.testArrayList();
+//        
         MockList mList = new MockList();
         mList.testMockList();
         
